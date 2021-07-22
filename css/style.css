@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header {
     width: 100%;
     height: 100vh;
@@ -51,11 +55,12 @@ header .menu .ativo, header .menu a:hover{
 
 /*Parte da section main*/
 
+
 .main_cta{
    width: 100%;
    margin: 60px 0;
    text-align: center;
-   margin-top: -600px;
+   margin-top: -650px;
 }
 
 .main_cta h2{
@@ -90,22 +95,21 @@ header .menu .ativo, header .menu a:hover{
 }
 
 .diferenciais{
-    min-width: 100%;
+    background-color: #f2f8fb;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 40px;
+
     
 }
 
 .diferencial-single{
-    background-color:#FFFF;
+    border-radius:10px;
+    background-color:#FFF;
+    width: 23%;
     margin-right: 2%;
-    margin-left: 2%;
-    padding: 50px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
+    padding:50px 20px;
+    transition: 1S;
     
 }
 .diferencial-single:hover{
@@ -201,6 +205,35 @@ section.conquistas{
 .conquista-single p{
     color: #124265;
 }
+
+section.imagem{
+    background-color: white;
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.imagem-single img{
+    width: 55%;
+    line-height: 0;
+    margin-left: 22%;
+    border-radius: 10px;
+    
+    
+}
+
+.imagem-single img{
+    filter: grayscale(100%);
+    transform: scale(1,1);
+    transition: 1s;
+}
+
+.imagem-single img:hover{
+    transform: scale(1.1,1.1);
+    filter: grayscale(0);
+    
+}
+
 /*area do video*/
 
 section.sobre-empreendedor{
@@ -213,12 +246,19 @@ section.sobre-empreendedor{
     width: 20%;
     margin-left: 60px;
     border-radius: 7px;
-    
-    
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.sobre-empreendedor-video:hover{
+    transform: scale(1.1,1.1);
+    filter: grayscale(0);
+
 }
 
 .sobre-empreendedor-video video{
     max-width: 100%;
+    
  
 }
 
@@ -241,4 +281,160 @@ section.sobre-empreendedor{
     color: #444444;
     font-size: 14px;
     margin-bottom: 14px;
+}
+
+/*SECTION DEPOIMENTOS*/
+
+section.depoimentos{
+    padding:40px 0;
+    background-color: #f2f8fb;
+    margin-top: 10px;
+}
+
+section.depoimentos .depoimentos-chamada{
+    text-align: center;
+
+}
+
+.depoimentos-chamada h2{
+    color: #124265;
+    text-transform: uppercase;
+}
+
+.depoimentos-chamada p{
+    color:#444444;
+    margin:10px 0;
+    font-size: 14px;
+    
+}
+
+.carrousel{
+    display: flex;
+}
+
+.carrousel-single{
+    width:31%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.carrousel-single-box{
+    padding:20px;
+    background-color:#FFF;
+    border-radius:10px;
+    margin-left: 60px;
+    transition: 1s;
+}
+
+.carrousel-single-box p{
+    font-style: italic;
+    color:#444444;
+    font-size: 14px;
+    
+}
+
+.carrousel-single-box:hover{
+    transform:scale(1.1,1.1) 
+}
+
+.carrousel-single-box i{
+    color: #c9e3f5;
+    font-size: 19px;
+    padding:0 8px;
+}
+
+.carrousel-single img{
+    width:70px;
+    height:70px;
+    display: inline;
+    margin:10px 0;
+    border-radius:50%;
+    transition: 1s;
+}
+
+.carrousel-single img:hover{
+    transform:scale(1.1,1.1);
+}
+
+.carrousel-single span{
+    color:#ccc;
+}
+
+/*rodape*/
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-content p{
+      
+      color: #a7a7a7;
+      font-size: 1.2rem;
+
+  }
+
+  .social-list a{
+      margin: 0 2rem; 
+      color: #a7a7a7;
+      font-size: 1.5rem;   
+  }
+
+  .social-list ul{
+      display: flex;
+      color: white;
+      
+  }
+
+  #link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #124265; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0.1rem 0.6rem #000;
+}
+
+@media screen and (max-width: 768px){
+    .diferencial-single{
+        width:100%;
+        margin-bottom: 20px;
+        margin-left: -25px;
+        
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-mobile{
+        width:80%;
+        text-align: right;
+        display: block;
+    }
+    .menu-mobile i{
+        cursor: pointer;
+        font-size: 23px;
+        margin-top:8px;
+    }
+    .conteudo-sobre p{
+        width:100%;  margin:20px 20px;
+    }
+    
 }
